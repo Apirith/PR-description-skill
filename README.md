@@ -268,12 +268,4 @@ Found a case the skill handles poorly? Open an issue with:
 
 PRs welcome — especially for new example types in `references/examples.md`.
 
----
 
-## License
-
-MIT — use it, fork it, extend it.
-
----
-
-*Built with Claude · Made by [Apirith](https://github.com/Apirith)*
