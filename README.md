@@ -25,9 +25,9 @@ It adapts automatically to context: lean and fast for solo hotfixes, thorough an
 ```bash
 git clone https://github.com/Apirith/github-pr-description-skill.git
 cd github-pr-description-skill
-```
+``''
 
-Or download the ZIP from the green **Code** button above.
+Or download the ZIP from the green **Code** button above
 
 ---
 
