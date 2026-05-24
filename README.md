@@ -1,6 +1,6 @@
 # 🧠 GitHub PR Description Skill for Claude
 
-> A plug-and-play Claude skill that generates polished, structured Pull Request descriptions in seconds — from git diffs, commit logs, branch names, or plain English.
+> A plug-and-play Claude skill that generates polished, structured Pull Request descriptions in seconds from git diffs, commit logs, branch names, or plain English.
 
 ---
 
