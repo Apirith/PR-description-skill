@@ -54,11 +54,11 @@ Always produce output in this exact structure. Omit sections with zero content, 
 
 ## Changes
 
-✨ Feature
-- <bullet>
+- <bullet> ✨ Feature
 
-🐛 Fix
-- <bullet>
+
+- <bullet> 🐛 Fix
+
 
 ♻️ Refactor
 - <bullet>
