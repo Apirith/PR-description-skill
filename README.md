@@ -28,7 +28,7 @@ Adds Google as an OAuth2 login provider. Introduces a callback handler that vali
 - Verified CSRF state mismatch returns 403
 
 ## Checklist
-- [ ] Tests added / updated
+- [ ] Tests added/updated
 - [ ] No breaking changes
 - [ ] Self-reviewed before submitting
 
