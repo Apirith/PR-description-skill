@@ -13,21 +13,21 @@
 ```
 feat(auth): add OAuth2 login with Google
 
-## Summary
+Summary
 Adds Google as an OAuth2 login provider. Introduces a callback handler that
 validates CSRF state, exchanges the authorization code for tokens, and creates
 a user session. No changes to the existing email/password flow.
 
-## Changes
+Changes
 ✨ Feature
 - Add Google OAuth2 provider config to `providers.ts`
 - Add `handleGoogleCallback` to validate state and exchange code for tokens
 
-## Testing
+Testing
 - Manually tested full OAuth flow with a test Google account in dev
 - Verified CSRF state mismatch returns 403
 
-## Checklist
+Checklist
 - [ ] Tests added / updated
 - [ ] No breaking changes
 - [ ] Self-reviewed before submitting
