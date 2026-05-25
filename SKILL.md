@@ -15,19 +15,19 @@ Activate this skill whenever the user:
 
 ### Claude Code (slash command)
 When invoked as `/pr-description` with no user-provided input, run the following in order until one succeeds:
-1. `git diff main` — full diff against main
-2. `git diff --staged` — staged changes only
-3. `git diff HEAD~1` — last commit
-4. `git log --oneline main..HEAD` — commit messages only
+1. `git diff main`  full diff against main
+2. `git diff --staged`  staged changes only
+3. `git diff HEAD~1`  last commit
+4. `git log --oneline main..HEAD`  commit messages only
 
-If none return output, ask the user: "No diff found — are you on a feature branch, or would you like to paste a diff directly?"
+If none return output, ask the user: "No diff found,  are you on a feature branch, or would you like to paste a diff directly?"
 
 ### Input confidence levels
 Adapt output depth to what you have:
 
 | Input type | Depth |
 |---|---|
-| Full diff with commit messages | Fill every section thoroughly — no TODOs |
+| Full diff with commit messages | Fill every section thoroughly  no TODOs |
 | Diff only (no commit messages) | Infer intent from file paths and change content |
 | Commit log only | Fill what commit messages reveal; use `[TODO]` for testing details |
 | Branch name only | Infer from naming conventions; use `[TODO]` for all content sections |
@@ -37,7 +37,7 @@ Adapt output depth to what you have:
 Never invent specific details (test results, ticket numbers, metrics). Use `[TODO: ...]` with a specific prompt rather than a vague placeholder.
 
 ### Custom templates
-If the user provides a `.github/pull_request_template.md` or any custom template structure, fill that template exactly — do not substitute the default format.
+If the user provides a `.github/pull_request_template.md` or any custom template structure, fill that template exactly;  do not substitute the default format.
 
 ---
 
@@ -56,21 +56,16 @@ Always produce output in this exact structure. Omit sections with zero content, 
 
 - <bullet> ✨ Feature
 
-
 - <bullet> 🐛 Fix
 
+- <bullet> ♻️ Refactor
 
-♻️ Refactor
-- <bullet>
+- <bullet>🧹 Chore
 
-🧹 Chore
-- <bullet>
+- <bullet>📝 Docs
 
-📝 Docs
-- <bullet>
+- <bullet>⚠️ Breaking
 
-⚠️ Breaking
-- <bullet>
 
 ## Testing
 Describe what was tested, the method (unit, manual, integration), and what reviewers should verify.
@@ -79,7 +74,7 @@ Describe what was tested, the method (unit, manual, integration), and what revie
 Flag tricky areas, design decisions, known limitations, deployment dependencies, or anything warranting extra scrutiny.
 
 ## Checklist
-- [ ] Tests added / updated
+- [ ] Tests added/updated
 - [ ] Docs updated (if applicable)
 - [ ] No breaking changes (or breaking changes documented below)
 - [ ] Self-reviewed before submitting
@@ -91,7 +86,7 @@ Flag tricky areas, design decisions, known limitations, deployment dependencies,
 Format: `<type>(<scope>): <short description>`
 
 - **type**: `feat`, `fix`, `refactor`, `chore`, `docs`, `test`, `perf`, `ci`
-- **scope**: the module, route, component, or package affected — omit if not clearly identifiable
+- **scope**: the module, route, component, or package affected;  omit if not clearly identifiable
 - **short description**: imperative mood, lowercase, no period, ≤72 chars total title length
 
 ### Scope detection heuristics
@@ -155,12 +150,12 @@ When the diff spans multiple packages:
 
 ## Tone and Style
 
-- **Professional but direct** — no filler words, no marketing language
+- **Professional but direct**  no filler words, no marketing language
 - **Bullets over paragraphs** in the Changes section
-- **Active voice** in bullets: "Add X", "Remove Y", "Fix Z" — not "X was added"
+- **Active voice** in bullets: "Add X", "Remove Y", "Fix Z"  not "X was added"
 - **Reviewer empathy**: flag anything non-obvious, risky, or that warrants extra scrutiny
 - **Honest about gaps**: use `[TODO: describe what was tested]` rather than inventing details
-- `[TODO]` placeholders must include a specific prompt — never just `[TODO]` alone
+- `[TODO]` placeholders must include a specific prompt  never just `[TODO]` alone
 
 ---
 
@@ -168,9 +163,9 @@ When the diff spans multiple packages:
 
 After generating, accept and apply these follow-up requests without re-generating from scratch:
 
-- `"Make this more concise"` — trim prose, shorten bullets
-- `"Expand the reviewer notes"` — add context, edge cases, risk areas
-- `"Add a rollback section"` — append rollback steps after the Checklist
-- `"Fill in the TODOs"` — ask the user for the missing information, then fill in
-- `"Write this for a non-technical reviewer"` — plain language, avoid jargon, explain impact over implementation
-- `"Add a deployment checklist"` — append environment variable changes, migration steps, feature flag instructions
+- `"Make this more concise"`  trim prose, shorten bullets
+- `"Expand the reviewer notes"`  add context, edge cases, risk areas
+- `"Add a rollback section"`,  append rollback steps after the Checklist
+- `"Fill in the TODOs"`  ask the user for the missing information, then fill in
+- `"Write this for a non-technical reviewer"`  plain language, avoid jargon, explain impact over implementation
+- `"Add a deployment checklist"`  append environment variable changes, migration steps, feature flag instructions
